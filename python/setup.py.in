@@ -60,7 +60,8 @@ includes_dir = [
 "/usr/local/include",
 "/opt/include",
 os.path.join(ROOT,'include'),
-HOME
+HOME,
+os.environ.get('INCLUDE', '')
 ];
 
 xml_includes=""
@@ -86,6 +87,7 @@ if iconv_includes == "":
 # those are added in the linker search path for libraries
 libdirs = [
 os.path.join(ROOT,'lib'),
+os.environ.get('LIB', '')
 ]
 
 xml_files = ["libxml2-api.xml", "libxml2-python-api.xml",
