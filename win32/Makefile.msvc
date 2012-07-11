@@ -69,7 +69,7 @@ LIBS =
 LIBS = $(LIBS) wsock32.lib ws2_32.lib
 !endif 
 !if "$(WITH_ICONV)" == "1"
-LIBS = $(LIBS) iconv.lib
+LIBS = $(LIBS) libiconv.lib
 !endif 
 !if "$(WITH_ZLIB)" == "1"
 LIBS = $(LIBS) zdll.lib

@@ -1011,8 +1011,8 @@ def buildWrappers():
                 if classes_ancestor[classname] == "xmlCore" or \
                    classes_ancestor[classname] == "xmlNode":
                     classes.write("    def __repr__(self):\n")
-                    format = "<%s (%%s) object at 0x%%x>" % (classname)
-                    classes.write("        return \"%s\" %% (self.name, long(pos_id (self)))\n\n" % (
+                    format = "<%s object at 0x%%x>" % (classname)
+                    classes.write("        return \"%s\" %% (long(pos_id (self)),)\n\n" % (
                                   format))
             else:
                 txt.write("Class %s()\n" % (classname))
