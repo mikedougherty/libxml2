@@ -63,7 +63,7 @@ includes_dir = [
 "/opt/include",
 os.path.join(ROOT, 'include'),
 HOME,
-os.environ.get('LIB', '')
+os.environ.get('INCLUDE', '')
 ]
 
 xml_includes = ""
