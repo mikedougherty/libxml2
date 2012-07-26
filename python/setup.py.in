@@ -33,7 +33,7 @@ except:
 
 if WITHDLLS:
     # libxml dlls (expected in ROOT/bin)
-    dlls = ['iconv.dll', 'libxml2.dll', 'libxslt.dll', 'libexslt.dll']
+    dlls = ['iconv.dll', 'libxml2.dll'] # , 'libxslt.dll', 'libexslt.dll']
     dlls = map(lambda dll: os.path.join(ROOT, 'bin', dll), dlls)
 
     # create __init__.py for the libxmlmods package
